@@ -3,10 +3,11 @@ const helmet = require("helmet");
 const cors = require('cors')
 const logger =require('morgan')
 const compression = require('compression')
+// const api = require('./routes')
 
 
 require('dotenv').config() //environmental variables
-require('./config/init_mongodb.js') //DB initialisation
+require('./db') //DB initialisation
 const PORT = 3400 || process.env.PORT
 
 const app = express()
@@ -19,8 +20,24 @@ app.use(compression())
 
 
 
-
-
+//testing
+const {Borda} = require('votes')
+const borda = new Borda({
+    candidates: ['Lion', 'Bear', 'Sheep'],
+    ballots: [
+      { ranking: [['Lion'], ['Sheep'], ['Bear']], weight: 1 },
+      { ranking: [['Sheep'], ['Lion'], ['Bear']], weight: 1 },
+      { ranking: [['Bear'], ['Sheep'], ['Bear']], weight: 1},
+    ],
+  })
+  
+  const scores = borda.scores()
+  console.log('scores : ',scores)
+  // -> { Bear: 10, Lion: 8, Sheep: 9}
+  
+  const ranking = borda.ranking()
+  console.log('ranking : ',ranking)
+  // -> [ [ 'Bear' ], [ 'Sheep' ], [ 'Lion' ] ]
 
 app.listen(PORT, () => { console.log(`Server is running at ${PORT}`) })
   
