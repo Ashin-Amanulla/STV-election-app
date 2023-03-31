@@ -2,7 +2,7 @@ function PromoSection() {
   return (
     <div className="bg-[#FFEAEA] py-8 px-4 sm:px-6 lg:py-8 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-2xl font-extrabold tracking-tight text-[#9A208C] sm:text-4xl underline underline-offset-8">
+        <h2 className="bg-[#dc668a] w-[500px] text-center mx-auto py-4 text-xl font-extrabold tracking-tight text-white sm:text-4xl">
           Voting Explained
         </h2>
         <p className="mt-4 text-md text-gray-500">
