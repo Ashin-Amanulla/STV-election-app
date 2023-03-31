@@ -46,11 +46,6 @@ function Header() {
             Home
           </span>
         </Link>
-        <Link href="/vote">
-          <span className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-700">
-            Vote now
-          </span>
-        </Link>
         <Link href="/signup">
           <span className="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-700 sm:mt-0 sm:ml-2">
             Sign up
