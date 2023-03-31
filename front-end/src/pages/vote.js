@@ -1,9 +1,9 @@
 import React from 'react'
 
-function vote() {
+function Vote() {
   return (
     <div>vote</div>
   )
 }
 
-export default vote
+export default Vote
