@@ -8,11 +8,12 @@ function Timer({ isOpen, onClose }) {
     const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
-    const tomorrow = moment().add(1, "days").startOf("day");
-    const diff = moment.duration(tomorrow.diff(moment()));
+    const fourDaysFromNow = moment().add(3, "days").endOf("day");
+    const diff = moment.duration(fourDaysFromNow.diff(moment()));
 
     const interval = setInterval(() => {
       setTimeLeft({
+        day:diff.days(),
         hours: diff.hours(),
         minutes: diff.minutes(),
         seconds: diff.seconds(),
@@ -64,6 +65,10 @@ function Timer({ isOpen, onClose }) {
                 </Dialog.Title>
                 <div className="flex flex-col items-center py-2">
                 <div className="flex">
+                <div className="px-3 py-2 bg-gray-800 text-white mx-1 rounded-md">
+                    {timeLeft.day ? timeLeft.day : "00"}
+                    <span className="text-xs">Day</span>
+                    </div>
                     <div className="px-3 py-2 bg-gray-800 text-white mx-1 rounded-md">
                     {timeLeft.hours ? timeLeft.hours : "00"}
                     <span className="text-xs">Hours</span>
