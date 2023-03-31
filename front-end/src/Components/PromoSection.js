@@ -1,11 +1,11 @@
 function PromoSection() {
   return (
     <div className="bg-[#FFEAEA] py-8 px-4 sm:px-6 lg:py-8 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto mt-6 text-center">
         <h2 className="bg-[#dc668a] w-[500px] text-center mx-auto py-4 text-xl font-extrabold tracking-tight text-white sm:text-4xl">
           Voting Explained
         </h2>
-        <div className="mt-4 text-lg font-extrabold text-gray-500 text-justify w-4/5 mx-auto" style={{fontFamily:'Roboto Slab'}}>
+        <div className="mt-16 text-lg font-extrabold text-gray-500 text-justify w-4/5 mx-auto" style={{fontFamily:'Roboto Slab'}}>
           Here at Roehampton, we use a <strong className="text-gray-700" style={{fontFamily:'Roboto Slab'}}>Single Transferable Voting</strong> system as we
           feel this is the most representative to our student body
           <br />
