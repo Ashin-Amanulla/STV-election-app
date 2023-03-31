@@ -5,12 +5,12 @@ function PromoSection() {
         <h2 className="bg-[#dc668a] w-[500px] text-center mx-auto py-4 text-xl font-extrabold tracking-tight text-white sm:text-4xl">
           Voting Explained
         </h2>
-        <p className="mt-4 text-md text-gray-500">
-          Here at Roehampton, we use a <strong className="text-gray-700">Single Transferable Voting</strong> system as we
+        <div className="mt-4 text-lg font-extrabold text-gray-500 text-justify w-4/5 mx-auto" style={{fontFamily:'Roboto Slab'}}>
+          Here at Roehampton, we use a <strong className="text-gray-700" style={{fontFamily:'Roboto Slab'}}>Single Transferable Voting</strong> system as we
           feel this is the most representative to our student body
           <br />
           <br/>
-          Most elections will use the <strong className="text-gray-700">'First Past The Post'</strong> method whereby the
+          Most elections will use the <strong className="text-gray-700" style={{fontFamily:'Roboto Slab'}}>'First Past The Post'</strong> method whereby the
           candidate with the most votes is declared the winner.
           <br />
           <br />
@@ -33,7 +33,7 @@ function PromoSection() {
           This means that even if your most favoured candidate is removed in the
           early rounds, your voice is still represented and can create an
           influence on the overall outcome.
-        </p>
+        </div>
         <div className="mt-10 mx-auto w-full sm:max-w-lg lg:max-w-5xl">
           <div className="iframe-container">
             <iframe

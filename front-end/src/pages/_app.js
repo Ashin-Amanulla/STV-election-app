@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
         <link rel="shortcut icon" href="/images/roe-logo20.png" type="image/x-icon" />
         <style>
           @import url(https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap);
-          @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
         </style>
       </Head>
     <Header />
