@@ -14,7 +14,7 @@ function Banner() {
           those in your charge.
         </p>
         <button className="bg-white text-gray-900 rounded-full py-4 px-8 font-bold uppercase tracking-wider pointer hover:bg-gray-300">
-          Get Started
+          Vote now
         </button>
       </div>
     </section>
