@@ -1,4 +1,10 @@
+import { useState } from "react";
+import Timer from "./Timer";
 function Banner() {
+  let [isOpen, setIsOpen] = useState(false)
+  function openModal() {
+    setIsOpen(true)
+  }
   return (
     <section
       className="bg-[#dc668a] bg-center bg-contain bg-no-repeat h-screen flex justify-center items-center relative"
@@ -13,9 +19,10 @@ function Banner() {
           Leadership is not about being in charge. It's about taking care of
           those in your charge.
         </p>
-        <button className="bg-white text-gray-900 rounded-full py-4 px-8 font-bold uppercase tracking-wider pointer hover:bg-gray-300">
+        <button className="bg-white text-gray-900 rounded-full py-4 px-8 font-bold uppercase tracking-wider pointer hover:bg-gray-300" onClick={openModal}>
           Vote now
         </button>
+        <Timer isOpen={isOpen} onClose={() => setIsOpen(false)}/>
       </div>
     </section>
   )
