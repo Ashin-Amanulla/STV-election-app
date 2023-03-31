@@ -11,6 +11,7 @@ function Header() {
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
           <Image
+            className='invert'
             src="/images/roe-logo20.png"
             alt="Logo"
             width={150}
