@@ -1,40 +1,40 @@
 import Ballot from "@/Components/Ballot";
 import Card from "@/Components/Card"
-import React,{useState} from "react"
+import Select from "@/Components/Select";
+import React from "react"
 
 function Vote() {
-  const [vote, setVote] = useState("");
     const president = [
         {
             name: "John",
-            image: "https://mdbootstrap.com/img/new/avatars/6.jpg",
+            image: "https://mdbootstrap.com/img/new/avatars/4.jpg",
             about: "Frontend Developer"
         },
         {
             name: "Sean",
-            image: "https://mdbootstrap.com/img/new/avatars/7.jpg",
+            image: "https://mdbootstrap.com/img/new/avatars/5.jpg",
             about: "Backend Developer"
         },
         {
             name: "Diana",
-            image: "https://mdbootstrap.com/img/new/avatars/8.jpg",
+            image: "https://mdbootstrap.com/img/new/avatars/6.jpg",
             about: "Backend Developer"
         }
     ]
     const uuc = [
         {
-            name: "John",
-            image: "https://mdbootstrap.com/img/new/avatars/6.jpg",
+            name: "Rock",
+            image: "https://mdbootstrap.com/img/new/avatars/1.jpg",
             about: "Frontend Developer"
         },
         {
-            name: "Sean",
-            image: "https://mdbootstrap.com/img/new/avatars/7.jpg",
+            name: "Alex",
+            image: "https://mdbootstrap.com/img/new/avatars/2.jpg",
             about: "Backend Developer"
         },
         {
-            name: "Diana",
-            image: "https://mdbootstrap.com/img/new/avatars/8.jpg",
+            name: "Emo",
+            image: "https://mdbootstrap.com/img/new/avatars/3.jpg",
             about: "Backend Developer"
         }
     ]
@@ -68,37 +68,11 @@ function Vote() {
         </p>
         <Card data={president} position="President"/>
       <Ballot title="Make your vote">
-      <select
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
-              id="department"
-              value={vote}
-              onChange={(e) => setVote(e.target.value)}
-              placeholder="Department"
-            >
-              <option value="">Select candidate</option>
-              {president.map(data=>{
-                  return (
-                    <option value="IT">{data.name}</option>  
-                )
-              })}
-            </select>
+        <Select data={president}/>
       </Ballot>
         <Card data={uuc} position="UUC"/>
         <Ballot title="Make your vote">
-      <select
-              className="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
-              id="department"
-              value={vote}
-              onChange={(e) => setVote(e.target.value)}
-              placeholder="Department"
-            >
-              <option value="">Select candidate</option>
-              {uuc.map(data=>{
-                  return (
-                    <option value="IT">{data.name}</option>  
-                )
-              })}
-            </select>
+        <Select data={uuc}/>
       </Ballot>
       </div>
     </div>
