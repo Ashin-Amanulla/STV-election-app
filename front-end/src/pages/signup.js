@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Link from 'next/link';
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,6 +73,11 @@ function Signup() {
               <option value="Sales">Sales</option>
             </select>
           </div>
+          <Link href='/login'>
+          <span className="inline-block align-baseline px-2 font-bold text-sm text-blue-500 hover:text-blue-800">
+            Already have an account?
+          </span>
+          </Link>
           <button
             className="bg-[#dc668a] hover:bg-[#dd265e] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
