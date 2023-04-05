@@ -10,12 +10,14 @@ function Header() {
     <header className="bg-[#dc668a] sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
         <div>
+          <Link href='/'>
           <Image
             className='invert'
             src="/images/roe-logo20.png"
             alt="Logo"
             width={150}
             height={150}/>
+          </Link>
         </div>
         <div className="sm:hidden">
           <button
@@ -44,11 +46,6 @@ function Header() {
         <Link href="/">
           <span className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-700">
             Home
-          </span>
-        </Link>
-        <Link href="/signup">
-          <span className="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-700 sm:mt-0 sm:ml-2">
-            Sign up
           </span>
         </Link>
         <Link href="/login">
