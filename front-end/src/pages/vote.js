@@ -40,13 +40,13 @@ function Vote() {
           You are voting for the  following posiions
         </h1>
         <div className="flex justify-center bg-sky-200">
-          <div className="w-96">
+          <div className="w-full">
             {positions.map(pos => {
               return (
                 <span
                 key={pos}
                 onClick={goto}
-                className="block w-full cursor-pointer rounded-lg p-4 transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
+                className="block w-full border-b-4 border-orange-200 cursor-pointer rounded-lg p-4 transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200">
                 {pos}
               </span>
               )
