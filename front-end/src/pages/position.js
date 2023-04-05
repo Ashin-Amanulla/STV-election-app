@@ -51,8 +51,21 @@ function Position() {
     }
 
     const handleCandidateClick = (name) => {
-        setVote([...vote, name])
-        console.log(...vote)
+        if (vote.length === 0) {
+            setVote([...vote, name])
+        } else {
+            let alreadyVoted = false
+            vote.forEach(data => {
+                if (data === name) {
+                    const updatedVote = vote.filter(candidate => candidate !== name)
+                    setVote(updatedVote)
+                    alreadyVoted = true
+                }
+            })
+            if (!alreadyVoted) {
+                setVote([...vote, name])
+            }
+        }
     }
 
     const abstain = () => {
@@ -86,7 +99,7 @@ function Position() {
         </section>
         <div className="bg-gray-100 p-4">
         <p className="text-yellow-600 font-medium">Note <GoAlert className='inline'/></p>
-        <p className="text-yellow-500 text-sm">Click the candidate card to add the candidate name to preference list or click the abstain button for vote abstaining.</p>
+        <p className="text-yellow-500 text-sm">Click the candidate card to add/remove the candidate name to preference list or click the abstain button for vote abstaining.</p>
         </div>
         </div>
                     <table className="container mx-auto w-full text-left my-20">
