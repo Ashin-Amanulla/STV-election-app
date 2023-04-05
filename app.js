@@ -21,23 +21,30 @@ app.use(compression())
 
 
 //testing
-const {Borda} = require('votes')
-const borda = new Borda({
-    candidates: ['Lion', 'Bear', 'Sheep'],
-    ballots: [
-      { ranking: [['Lion'], ['Sheep'], ['Bear']], weight: 1 },
-      { ranking: [['Sheep'], ['Lion'], ['Bear']], weight: 1 },
-      { ranking: [['Bear'], ['Sheep'], ['Bear']], weight: 1},
-    ],
-  })
+// const {Borda} = require('votes')
+// const borda = new Borda({
+//     candidates: ['Lion', 'Bear', 'Sheep'],
+//     ballots: [
+//       { ranking: [['Lion'], ['Sheep'], ['Bear']], weight: 1 },
+//       { ranking: [['Sheep'], ['Lion'], ['Bear']], weight: 1 },
+//       { ranking: [['Bear'], ['Sheep'], ['Bear']], weight: 1},
+//     ],
+//   })
   
-  const scores = borda.scores()
-  console.log('scores : ',scores)
-  // -> { Bear: 10, Lion: 8, Sheep: 9}
+//   const scores = borda.scores()
+//   console.log('scores : ',scores)
+//   // -> { Bear: 10, Lion: 8, Sheep: 9}
   
-  const ranking = borda.ranking()
-  console.log('ranking : ',ranking)
-  // -> [ [ 'Bear' ], [ 'Sheep' ], [ 'Lion' ] ]
+//   const ranking = borda.ranking()
+//   console.log('ranking : ',ranking)
+//   // -> [ [ 'Bear' ], [ 'Sheep' ], [ 'Lion' ] ]
+
+
+
+  //Apis 
+  app.use('/api/candidate', require('./routes/candidate'))
+  app.use('/api/authentication', require('./routes/authentication'))
+
 
 app.listen(PORT, () => { console.log(`Server is running at ${PORT}`) })
   

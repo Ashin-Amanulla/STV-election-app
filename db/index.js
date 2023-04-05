@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017'
 
 mongoose
-  .connect(process.env.MONGO_URI, {
-    dbName:process.env.DB_NAME,
+  .connect(mongoURI, {
+    dbName: process.env.DB_NAME,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
