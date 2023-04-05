@@ -59,6 +59,10 @@ function Position() {
         setVote(['abstain'])
     }
 
+    const voteReset = () => {
+        setVote([])
+    }
+
     const voteSubmit = () => {
         confirm('Are you sure you want to submit?')
     }
@@ -104,6 +108,7 @@ function Position() {
                     </tbody>
             </table>
             <div className="text-center">
+            <button className="bg-orange-500 my-2 text-base text-white rounded-full py-4 px-4 font-bold  pointer hover:bg-orange-800 mx-2 pointer" onClick={voteReset}>Reset</button>
             <button className="bg-blue-500 my-2 text-base text-white rounded-full py-4 px-4 font-bold  pointer hover:bg-blue-800 mx-2 pointer" onClick={voteSubmit}>Submit</button>
             </div>
         </div>      
