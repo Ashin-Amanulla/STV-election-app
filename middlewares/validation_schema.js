@@ -1,7 +1,8 @@
 const Joi = require('joi')
 
 //Joi autherization schema
-//Fields - name, email, password, type[student, ro, admin], candidate, candidateDetails
+
+//Fields - name, image, department
 const candidateJoi = Joi.object({
     name: Joi.string()
         .required(),
@@ -11,4 +12,17 @@ const candidateJoi = Joi.object({
     department: Joi.string()
 })
 
-module.exports = { candidateJoi}
+const votingJoi = Joi.object({
+    title: Joi.string()
+        .required(),
+
+    startTime: Joi.date()
+        .required(),
+
+    endTime: Joi.date()
+        .required(),
+
+    candidates: Joi.array(),
+})
+
+module.exports = { candidateJoi, votingJoi}

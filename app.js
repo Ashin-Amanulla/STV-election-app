@@ -43,6 +43,9 @@ app.use(compression())
 
   //Apis 
   app.use('/api/candidate', require('./routes/candidate'))
+  app.use('/api/voting', require('./routes/voting'))
+
+  //login apis
   app.use('/api/authentication', require('./routes/authentication'))
 
 
