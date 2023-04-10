@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 import Footer from "@/Components/Footer";
 
 export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState(false)
+  const [user, setUser] = useState(true)
   return (
     <>
       <Head>

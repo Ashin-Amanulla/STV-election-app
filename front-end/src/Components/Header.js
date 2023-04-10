@@ -48,6 +48,11 @@ function Header() {
             Home
           </span>
         </Link>
+        <Link href="/nominate">
+          <span className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-700">
+            Nominate
+          </span>
+        </Link>
         <Link href="/login">
           <span className="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-700 sm:mt-0 sm:ml-2">
             Log in
