@@ -12,7 +12,7 @@ function AdminMenu() {
             <button
             className="block py-2 px-4 text-sm hover:bg-gray-700 focus:bg-gray-700 focus:outline-none"
           >
-            <Link href="/dashboard">
+            <Link href="/dashboard" className='text-gray-100 hover:text-gray-100 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none'>
               Dashboard
             </Link>
           </button>
@@ -21,7 +21,7 @@ function AdminMenu() {
             <button
             className="block py-2 px-4 text-sm hover:bg-gray-700 focus:bg-gray-700 focus:outline-none"
           >
-            <Link href="/dashboard/add-candidate">
+            <Link href="/dashboard/add-candidate" className='text-gray-100 hover:text-gray-100 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none'>
               Add Candidate
             </Link>
           </button>
@@ -30,7 +30,7 @@ function AdminMenu() {
             <button
             className="block py-2 px-4 text-sm hover:bg-gray-700 focus:bg-gray-700 focus:outline-none"
           >
-            <Link href="/dashboard/declare-date">
+            <Link href="/dashboard/declare-date" className='text-gray-100 hover:text-gray-100 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none'>
               Declare Date
             </Link>
           </button>
@@ -39,7 +39,7 @@ function AdminMenu() {
             <button
             className="block py-2 px-4 text-sm hover:bg-gray-700 focus:bg-gray-700 focus:outline-none"
           >
-            <Link href="/dashboard/view-results">
+            <Link href="/dashboard/view-results" className='text-gray-100 hover:text-gray-100 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none'>
               View Results
             </Link>
             </button>

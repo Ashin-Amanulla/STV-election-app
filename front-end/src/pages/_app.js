@@ -3,6 +3,7 @@ import Header from "@/Components/Header";
 import Head from "next/head";
 import Script from 'next/script'
 import "@/styles/globals.css";
+import 'rsuite/dist/rsuite.min.css';
 import Footer from "@/Components/Footer";
 
 export default function App({ Component, pageProps }) {
