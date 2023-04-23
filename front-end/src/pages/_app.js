@@ -1,10 +1,13 @@
+import {useState} from 'react'
 import Header from "@/Components/Header";
 import Head from "next/head";
 import Script from 'next/script'
 import "@/styles/globals.css";
+import 'rsuite/dist/rsuite.min.css';
 import Footer from "@/Components/Footer";
 
 export default function App({ Component, pageProps }) {
+  const [user, setUser] = useState(true)
   return (
     <>
       <Head>
@@ -28,9 +31,9 @@ export default function App({ Component, pageProps }) {
           agent-id="4fef4c10-442f-4a9e-891b-5dddf4e24e0f"
           language-code="en"
         ></df-messenger>
-      <Header />
+        {user && <Header />}
       <Component {...pageProps} />
-      <Footer />
+      {user && <Footer />}
     </>
   );
 }
