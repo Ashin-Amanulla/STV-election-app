@@ -21,9 +21,8 @@ const votingSchema = new Schema({
         type: [
             {
                 _id: {
-                    type: String,
-                    // type: mongoose.Schema.Types.ObjectId,
-                    // ref: 'candidate',
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: 'candidate',
                 },
                 votes: Array,
             }

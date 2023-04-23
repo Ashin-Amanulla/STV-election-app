@@ -52,22 +52,24 @@ router.put('/:_id', async (req, res) => {
     }
 })
 
-// router.put('/addCandidate/:_id', async (req, res) => {
-//     try {
-//         let _id = req.params._id
-//         let candidate = req.body.candidate
-//         if (candidate) {
-//             // let updated = await Voting.findByIdAndUpdate(_id, { $push: {candidates: candidate} }, { new: true })
-//             let updated = await Voting.updateOne({_id}, { $push: { candidates: candidate } }, { new: true })
-//             updated ? res.status(201).send(updated) : res.status(400).send({ message: "Voting Not Found with this id" })
-//         }
-//         else res.status(400).send({ message: "candidate field is required" })
-//     }
-//     catch (error) {
-//         console.log(error)
-//         res.status(400).send(error)
-//     }
-// })
+router.put('/addCandidate/:_id', async (req, res) => {
+    try {
+        let _id = req.params._id
+        let candidate = req.body.candidate
+        if (candidate) {
+            let duplicateCandidate = await Voting.exists({"candidates._id": candidate})
+            console.log("duplicateCandidate ", duplicateCandidate)
+            
+            let updated = await Voting.findByIdAndUpdate(_id, { $push: { candidates: {_id: candidate, votes: []} } }, { new: true })
+            updated ? res.status(201).send(updated) : res.status(400).send({ message: "Voting Not Found with this id" })
+        }
+        else res.status(400).send({ message: "candidate field is required" })
+    }
+    catch (error) {
+        console.log(error)
+        res.status(400).send(error)
+    }
+})
 
 router.delete('/:_id', async (req, res) => {
     try {
